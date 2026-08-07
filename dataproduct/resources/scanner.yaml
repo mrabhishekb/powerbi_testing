@@ -1,0 +1,23 @@
+version: v1
+name: scan-demo-sales-product
+type: workflow
+tags:
+  - scanner
+  - data-product
+description: "Scans and registers Data Product metadata."
+
+workflow:
+  dag:
+    - name: scan-demo-sales-product-job
+      description: "Scans data products from poros and registers metadata."
+      spec:
+        tags:
+          - scanner2
+        stack: scanner:2.0
+        compute: runnable-default
+        stackSpec:
+          type: data-product
+          sourceConfig:
+            config:
+              type: DataProduct
+              markDeletedDataProducts: true

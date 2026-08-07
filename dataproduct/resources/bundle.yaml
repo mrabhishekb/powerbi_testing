@@ -1,0 +1,15 @@
+name: demo-sales-bundle
+version: v1beta
+type: bundle
+tags:
+  - dataproduct
+  - demo
+description: "Bundle for demo sales lens deployment."
+layer: user
+
+bundle:
+  resources:
+    - id: lens
+      # Replace with absolute path used by your DataOS runner environment if needed.
+      file: dataproduct/resources/lens/deployment.yaml
+      workspace: public

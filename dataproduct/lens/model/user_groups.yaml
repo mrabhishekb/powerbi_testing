@@ -1,0 +1,4 @@
+user_groups:
+  - name: default
+    description: Default user group for all users.
+    includes: "*"

@@ -1,0 +1,38 @@
+tables:
+  - name: products
+    sql: {{ load_sql('products') }}
+    description: "Product master attributes used for category and brand slicing."
+    public: true
+
+    dimensions:
+      - name: product_id
+        type: number
+        sql: product_id
+        primary_key: true
+        public: true
+
+      - name: product_name
+        type: string
+        sql: product_name
+
+      - name: product_category
+        type: string
+        sql: product_category
+
+      - name: product_subcategory
+        type: string
+        sql: product_subcategory
+
+      - name: product_brand
+        type: string
+        sql: product_brand
+
+      - name: supplier_country
+        type: string
+        sql: product_supplier_country
+
+    measures:
+      - name: total_products
+        type: count_distinct
+        sql: product_id
+        description: "Distinct number of products."

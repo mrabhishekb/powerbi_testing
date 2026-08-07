@@ -1,0 +1,35 @@
+# Product meta section
+name: demo-sales-product
+version: v1beta
+entity: product
+type: data
+tags:
+  - DPDomain.Sales
+  - DPUsecase.Dashboard
+description: "Demo sales data product for category and monthly revenue insights."
+
+v1beta:
+  data:
+    meta:
+      title: Demo Sales Product
+      sourceCodeUrl: https://github.com/<your-org>/<your-repo>
+
+    collaborators:
+      - name: demouser
+        description: owner
+
+    resource:
+      refType: dataos
+      ref: bundle:v1beta:demo-sales-bundle
+
+    inputs:
+      - refType: dataos
+        # Replace with your DataOS dataset/depot reference.
+        ref: dataset:lenovopostgres:public:order_items
+      - refType: dataos
+        ref: dataset:lenovopostgres:public:products
+
+    ports:
+      lens:
+        ref: lens:v1alpha:demo-sales-lens:public
+        refType: dataos

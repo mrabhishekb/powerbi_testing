@@ -1,0 +1,71 @@
+tables:
+  - name: order_items
+    sql: {{ load_sql('order_items') }}
+    description: "Order line facts including quantity, pricing, fulfillment, and revenue metrics."
+    public: true
+
+    joins:
+      - name: products
+        relationship: many_to_one
+        sql: "{TABLE}.product_id = {products}.product_id"
+
+    dimensions:
+      - name: order_item_id
+        type: number
+        sql: order_item_id
+        primary_key: true
+        public: true
+
+      - name: order_id
+        type: number
+        sql: order_id
+
+      - name: product_id
+        type: number
+        sql: product_id
+
+      - name: fulfillment_status
+        type: string
+        sql: order_item_fulfillment_status
+
+      - name: warehouse_region
+        type: string
+        sql: order_item_warehouse_region
+
+      - name: shipped_date
+        type: time
+        sql: order_item_shipped_date
+
+      - name: order_item_shipped_month
+        type: time
+        sql: DATE_TRUNC('month', order_item_shipped_date)
+
+      - name: returned_flag
+        type: boolean
+        sql: order_item_returned_flag
+
+    measures:
+      - name: line_items
+        type: count
+        sql: order_item_id
+        description: "Number of order lines."
+
+      - name: total_quantity
+        type: sum
+        sql: order_item_quantity
+        description: "Total ordered quantity."
+
+      - name: total_revenue
+        type: sum
+        sql: order_item_total_amount
+        description: "Sum of total amount across order lines."
+
+      - name: total_margin
+        type: sum
+        sql: order_item_margin_amount
+        description: "Sum of margin amount across order lines."
+
+      - name: avg_unit_price
+        type: avg
+        sql: order_item_unit_price
+        description: "Average unit selling price."

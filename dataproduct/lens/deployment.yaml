@@ -1,0 +1,38 @@
+version: v1alpha
+name: demo-sales-lens
+layer: user
+type: lens
+tags:
+  - demo
+  - postgres
+  - lens
+description: "Simple semantic model for demo postgres sales data."
+
+lens:
+  compute: runnable-default
+
+  source:
+    # Update to your DataOS source configuration.
+    # Common pattern for postgres via depot:
+    # type: depot
+    # name: <your-depot-name>
+    type: depot
+    name: lenovopostgres
+
+  repo:
+    # Update with your repo URL and model base directory.
+    url: https://github.com/<your-org>/<your-repo>
+    lensBaseDir: dataproduct/lens/model
+    syncFlags:
+      - --ref=main
+
+  api:
+    replicas: 1
+    logLevel: info
+
+  worker:
+    replicas: 1
+    logLevel: info
+
+  router:
+    logLevel: info
