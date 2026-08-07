@@ -19,4 +19,4 @@ SELECT
   product_return_rate_pct,
   product_created_at,
   product_updated_at
-FROM public.products;
+FROM public.products

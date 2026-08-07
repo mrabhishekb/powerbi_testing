@@ -1,5 +1,5 @@
 version: v1alpha
-name: demo-sales-lens
+name: powerbi-testing-lens
 layer: user
 type: lens
 tags:
@@ -21,8 +21,8 @@ lens:
 
   repo:
     # Update with your repo URL and model base directory.
-    url: https://github.com/<your-org>/<your-repo>
-    lensBaseDir: dataproduct/lens/model
+    url: https://github.com/mrabhishekb/powerbi_testing
+    lensBaseDir: powerbi_testing/dataproduct/lens/model
     syncFlags:
       - --ref=main
 

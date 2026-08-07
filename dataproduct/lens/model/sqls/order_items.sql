@@ -20,4 +20,4 @@ SELECT
   order_item_return_reason,
   order_item_created_at,
   order_item_updated_at
-FROM public.order_items;
+FROM public.order_items

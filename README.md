@@ -34,7 +34,7 @@ Observed aggregates from live data:
   - `dataproduct/lens/model/views`
   - `dataproduct/lens/model/user_groups.yaml`
 - DataOS resources:
-  - `dataproduct/resources/lens/deployment.yaml`
+- `dataproduct/lens/deployment.yaml`
   - `dataproduct/resources/bundle.yaml`
   - `dataproduct/resources/data_product/deployment.yaml`
   - `dataproduct/resources/scanner.yaml`
@@ -50,11 +50,11 @@ Observed aggregates from live data:
 
 1. Push this repo to GitHub/Bitbucket.
 2. Update placeholders in:
-   - `dataproduct/resources/lens/deployment.yaml` (`repo.url`, `lensBaseDir`, `source`)
+   - `dataproduct/lens/deployment.yaml` (`repo.url`, `lensBaseDir`, `source`)
    - `dataproduct/resources/bundle.yaml` (`bundle.resources[].file`)
    - `dataproduct/resources/data_product/deployment.yaml` (`sourceCodeUrl`, `inputs`)
 3. Apply resources:
-   - `dataos-ctl resource apply -f dataproduct/resources/lens/deployment.yaml -w public`
+   - `dataos-ctl resource apply -f dataproduct/lens/deployment.yaml -w public`
    - `dataos-ctl resource apply -f dataproduct/resources/bundle.yaml -w public`
    - `dataos-ctl product apply -f dataproduct/resources/data_product/deployment.yaml`
    - `dataos-ctl resource apply -f dataproduct/resources/scanner.yaml -w public`

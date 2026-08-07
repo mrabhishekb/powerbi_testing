@@ -11,5 +11,5 @@ bundle:
   resources:
     - id: lens
       # Replace with absolute path used by your DataOS runner environment if needed.
-      file: dataproduct/resources/lens/deployment.yaml
+      file: dataproduct/lens/deployment.yaml
       workspace: public

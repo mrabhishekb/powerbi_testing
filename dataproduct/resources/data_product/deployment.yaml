@@ -12,7 +12,7 @@ v1beta:
   data:
     meta:
       title: Demo Sales Product
-      sourceCodeUrl: https://github.com/<your-org>/<your-repo>
+      sourceCodeUrl: https://github.com/mrabhishekb/powerbi_testing.git
 
     collaborators:
       - name: demouser
@@ -31,5 +31,5 @@ v1beta:
 
     ports:
       lens:
-        ref: lens:v1alpha:demo-sales-lens:public
+        ref: lens:v1alpha:powerbi-testing-lens:public
         refType: dataos
