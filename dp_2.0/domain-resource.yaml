@@ -1,6 +1,6 @@
 version: v1alpha
 type: vulcan
-name: powerbi-testing-dp
+name: powerbi-testing-dp-mrab
 tags:
   - sales_analytics
   - postgres
