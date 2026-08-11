@@ -1,7 +1,7 @@
 MODEL (
   name gold.sales_enriched,
   kind FULL,
-  grain [order_item_id],
+  grain order_item_id,
   description 'Enriched order item fact table for dashboarding category and time-based revenue.',
   assertions (
     not_null(columns := (order_item_id, product_id, order_item_shipped_ts))
@@ -28,4 +28,4 @@ SELECT
   p.product_supplier_country
 FROM bronze.order_items AS oi
 LEFT JOIN bronze.products AS p
-  ON p.product_id = oi.product_id;
+  ON p.product_id = oi.product_id

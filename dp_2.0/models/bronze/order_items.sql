@@ -1,7 +1,7 @@
 MODEL (
   name bronze.order_items,
   kind FULL,
-  grain [order_item_id],
+  grain order_item_id,
   description 'Bronze projection of upstream public.order_items table.',
   assertions (
     not_null(columns := (order_item_id, order_id, product_id))
@@ -21,4 +21,4 @@ SELECT
   order_item_shipped_date,
   CAST(order_item_shipped_date AS TIMESTAMP) AS order_item_shipped_ts,
   order_item_returned_flag
-FROM public.order_items;
+FROM public.order_items
