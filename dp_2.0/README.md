@@ -14,9 +14,6 @@ It is also aligned to the `vulcan-deployment` reference layout on your Desktop.
   - `models/gold/sales_enriched.sql`
 - Semantic model
   - `models/semantics/sales_enriched.yaml`
-- Metrics
-  - `models/metrics/revenue_timeseries.yaml`
-  - `models/metrics/line_items_timeseries.yaml`
 - Quality and deployment
   - `checks/sales_enriched.yml`
   - `tests/test_sales_enriched.yaml`
@@ -29,7 +26,7 @@ It is also aligned to the `vulcan-deployment` reference layout on your Desktop.
 1. Revenue by product category (bar chart)
 2. Monthly revenue trend (line chart)
 
-Use semantic `sales_enriched` and metric `revenue_timeseries` for these views.
+Use semantic `sales_enriched` directly for these views.
 
 ## Local Vulcan steps
 
