@@ -1,0 +1,3 @@
+.venv/
+.vulcan/
+__pycache__/

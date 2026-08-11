@@ -1,0 +1,44 @@
+name: powerbi-testing-dp-v2
+description: DataOS 2.0 Vulcan migration of the powerbi testing data product.
+tenant: lenovo-sandbox
+version: 0.1.0
+tags:
+  - sales_analytics
+  - postgres
+  - dataos2
+metadata:
+  domain: sales_operations
+  use_cases:
+    - Revenue trend analysis
+    - Category performance dashboarding
+  limitations:
+    - Minimal migration scaffold for two-chart dashboard use case
+
+users:
+  - username: abhishekbharadwaj
+    github_username: mrabhishekb
+    email: abhishekbharadwaj@tmdc.io
+
+gateways:
+  default:
+    connection:
+      type: depot
+      address: dataos://lenovopostgresdbconnection
+
+model_defaults:
+  dialect: postgres
+  cron: "0 * * * *"
+  start: "2025-01-01"
+
+linter:
+  enabled: true
+  warn_rules:
+    - NoMissingAudits
+
+deployment:
+  repo:
+    url: https://github.com/mrabhishekb/powerbi_testing.git
+    baseDir: dp_2.0
+  compute: runnable-default
+  runAsUser: "abhishekbharadwaj"
+  engine: postgres

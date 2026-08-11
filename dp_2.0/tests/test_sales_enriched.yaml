@@ -1,0 +1,32 @@
+test_sales_enriched_join:
+  model: gold.sales_enriched
+  inputs:
+    bronze.order_items:
+      rows:
+        - order_item_id: 1
+          order_id: 10
+          product_id: 101
+          order_item_quantity: 2
+          order_item_unit_price: 500.0
+          order_item_total_amount: 1000.0
+          order_item_margin_amount: 200.0
+          order_item_fulfillment_status: Fulfilled
+          order_item_warehouse_region: APAC
+          order_item_shipped_date: 2024-01-15
+          order_item_shipped_ts: 2024-01-15 00:00:00
+          order_item_returned_flag: false
+    bronze.products:
+      rows:
+        - product_id: 101
+          product_name: Demo Product
+          product_category: Electronics
+          product_subcategory: Laptops
+          product_brand: DemoBrand
+          product_supplier_country: India
+  outputs:
+    query:
+      rows:
+        - order_item_id: 1
+          product_id: 101
+          product_name: Demo Product
+          product_category: Electronics

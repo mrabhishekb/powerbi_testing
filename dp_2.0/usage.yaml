@@ -1,0 +1,21 @@
+good_for:
+  - Revenue and order performance analysis by product category.
+  - Monthly trend analysis for shipped order revenue.
+  - Simple dashboarding and KPI exploration in DataOS.
+
+not_for:
+  - Real-time operational order tracking.
+  - Financial close or audited accounting workflows.
+
+caveats:
+  - title: Sample migration scope
+    details: This project is intentionally minimal and focused on two dashboard charts.
+    severity: medium
+  - title: Source freshness
+    details: Data freshness depends on upstream `public.order_items` and `public.products` updates.
+    severity: medium
+
+references:
+  - title: DataOS 2.0 LDK setup
+    url: https://v2.dataos.info/references/resources/vulcan/ldk
+    type: doc

@@ -1,0 +1,44 @@
+version: v1alpha
+type: vulcan
+name: powerbi-testing-dp-v2
+tags:
+  - sales_analytics
+  - postgres
+spec:
+  runAsUser: "abhishekbharadwaj"
+  compute: runnable-default
+  engine: postgres
+  repo:
+    url: https://github.com/mrabhishekb/powerbi_testing.git
+    syncFlags:
+      - "--ref=main"
+      - "--submodules=off"
+    baseDir: dp_2.0
+    secret: lenovo-sandbox:git-sync
+  depots:
+    - dataos://lenovopostgresdbconnection?purpose=rw
+  workflow:
+    type: schedule
+    schedule:
+      crons:
+        - "0 * * * *"
+      endOn: "2027-01-01T00:00:00-00:00"
+      timezone: "Asia/Kolkata"
+      concurrencyPolicy: Forbid
+    logLevel: INFO
+    plan:
+      command:
+        - vulcan
+      arguments:
+        - --log-to-stdout
+        - plan
+        - --auto-apply
+    run:
+      command:
+        - vulcan
+      arguments:
+        - --log-to-stdout
+        - run
+  api:
+    replicas: 1
+    logLevel: INFO

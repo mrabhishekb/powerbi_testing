@@ -1,0 +1,35 @@
+models:
+  gold.sales_enriched:
+    alias: sales_enriched
+
+    dimensions:
+      includes:
+        - order_item_id
+        - order_id
+        - product_id
+        - product_name
+        - product_category
+        - product_subcategory
+        - product_brand
+        - product_supplier_country
+        - order_item_fulfillment_status
+        - order_item_warehouse_region
+        - order_item_shipped_date
+        - order_item_shipped_ts
+        - order_item_returned_flag
+
+    measures:
+      line_items:
+        type: count
+      total_quantity:
+        type: sum
+        expression: "{sales_enriched.order_item_quantity}"
+      total_revenue:
+        type: sum
+        expression: "{sales_enriched.order_item_total_amount}"
+      total_margin:
+        type: sum
+        expression: "{sales_enriched.order_item_margin_amount}"
+      avg_unit_price:
+        type: avg
+        expression: "{sales_enriched.order_item_unit_price}"

@@ -1,0 +1,13 @@
+kind: metric
+name: line_items_timeseries
+measure: sales_enriched.line_items
+ts: sales_enriched.order_item_shipped_ts
+granularity: month
+description: Monthly trend of order item counts.
+dimensions:
+  - name: category
+    ref: sales_enriched.product_category
+tags:
+  - volume
+  - trend
+  - dashboard

@@ -1,0 +1,26 @@
+- name: public.order_items
+  grain:
+    - order_item_id
+  columns:
+    order_item_id: BIGINT
+    order_id: BIGINT
+    product_id: BIGINT
+    order_item_quantity: INTEGER
+    order_item_unit_price: NUMERIC
+    order_item_total_amount: NUMERIC
+    order_item_margin_amount: NUMERIC
+    order_item_fulfillment_status: VARCHAR
+    order_item_warehouse_region: VARCHAR
+    order_item_shipped_date: DATE
+    order_item_returned_flag: BOOLEAN
+
+- name: public.products
+  grain:
+    - product_id
+  columns:
+    product_id: BIGINT
+    product_name: VARCHAR
+    product_category: VARCHAR
+    product_subcategory: VARCHAR
+    product_brand: VARCHAR
+    product_supplier_country: VARCHAR
