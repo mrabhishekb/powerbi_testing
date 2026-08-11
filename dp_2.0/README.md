@@ -16,7 +16,6 @@ It is also aligned to the `vulcan-deployment` reference layout on your Desktop.
   - `models/semantics/sales_enriched.yaml`
 - Quality and deployment
   - `checks/sales_enriched.yml`
-  - `tests/test_sales_enriched.yaml`
   - `domain-resource.yaml`
   - `git-sync-secret.yml`
   - `Makefile`
