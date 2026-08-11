@@ -13,7 +13,7 @@ spec:
     syncFlags:
       - "--ref=main"
       - "--submodules=off"
-    baseDir: powerbi_testing/dp_2.0
+    baseDir: powerbi_testing/dp_2.0/
     secretId: lenovo-sandbox:git-sync-mrab
   depots:
     - dataos://lenovopostgresdbconnection2?purpose=rw

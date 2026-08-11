@@ -38,7 +38,7 @@ linter:
 deployment:
   repo:
     url: https://github.com/mrabhishekb/powerbi_testing.git
-    baseDir: dp_2.0
+    baseDir: powerbi_testing/dp_2.0
   compute: lenovo-2.0
   runAsUser: "abhishekbharadwajtmdcio"
   engine: postgres
