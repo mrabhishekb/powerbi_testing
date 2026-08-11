@@ -6,13 +6,6 @@ tags:
   - sales_analytics
   - postgres
   - dataos2
-metadata:
-  domain: sales_operations
-  use_cases:
-    - Revenue trend analysis
-    - Category performance dashboarding
-  limitations:
-    - Minimal migration scaffold for two-chart dashboard use case
 
 users:
   - username: abhishekbharadwajtmdcio
