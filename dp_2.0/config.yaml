@@ -1,4 +1,4 @@
-name: powerbi-testing-dp-v2
+name: powerbi-testing-dp
 description: DataOS 2.0 Vulcan migration of the powerbi testing data product.
 tenant: lenovo-sandbox
 version: 0.1.0
@@ -37,7 +37,7 @@ linter:
 
 deployment:
   repo:
-    url: https://github.com/mrabhishekb/powerbi_testing.git
+    url: https://github.com/mrabhishekb/powerbi_testing
     baseDir: powerbi_testing/dp_2.0
   compute: lenovo-2.0
   runAsUser: "abhishekbharadwajtmdcio"
