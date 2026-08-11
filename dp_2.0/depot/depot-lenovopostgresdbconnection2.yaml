@@ -28,9 +28,9 @@ spec:
     port: 5432
     subprotocol: postgresql
   secrets:
-    - id: lenovo-sandbox:lenovo-postgresdbconnection2
+    - id: lenovo-sandbox:lenovo-postgresdbconnection
       purpose: scan
-    - id: lenovo-sandbox:lenovo-postgresdbconnection2
+    - id: lenovo-sandbox:lenovo-postgresdbconnection
       purpose: query
-    - id: lenovo-sandbox:lenovo-postgresdbconnection2
+    - id: lenovo-sandbox:lenovo-postgresdbconnection
       purpose: rw
