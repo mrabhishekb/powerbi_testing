@@ -6,14 +6,14 @@ tags:
   - postgres
 spec:
   runAsUser: "abhishekbharadwajtmdcio"
-  compute: lenovo-sandbox
+  compute: lenovo-2.0
   engine: postgres
   repo:
     url: https://github.com/mrabhishekb/powerbi_testing.git
     syncFlags:
       - "--ref=main"
       - "--submodules=off"
-    baseDir: powerbi_testing/dp_2.0
+    baseDir: dp_2.0
     secretId: lenovo-sandbox:git-sync-mrab
   depots:
     - dataos://lenovopostgresdbconnection2?purpose=rw

@@ -39,6 +39,6 @@ deployment:
   repo:
     url: https://github.com/mrabhishekb/powerbi_testing.git
     baseDir: dp_2.0
-  compute: runnable-default
+  compute: lenovo-2.0
   runAsUser: "abhishekbharadwajtmdcio"
   engine: postgres
