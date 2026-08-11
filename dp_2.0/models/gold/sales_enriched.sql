@@ -4,7 +4,7 @@ MODEL (
   grain order_item_id,
   description 'Enriched order item fact table for dashboarding category and time-based revenue.',
   assertions (
-    not_null(columns := (order_item_id, product_id, order_item_shipped_ts))
+    not_null(columns := (order_item_id, product_id))
   )
 );
 

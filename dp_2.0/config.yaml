@@ -1,4 +1,4 @@
-name: powerbi-testing-sample-dp
+name: powerbi-testing-sample-dp-mrab
 description: DataOS 2.0 Vulcan migration of the powerbi testing data product.
 domain: sales_operations
 tenant: lenovo-sandbox
