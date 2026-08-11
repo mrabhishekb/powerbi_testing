@@ -1,6 +1,6 @@
 MODEL (
   name bronze.order_items,
-  kind FULL,
+  kind VIEW,
   grain order_item_id,
   description 'Bronze projection of upstream public.order_items table.',
   assertions (

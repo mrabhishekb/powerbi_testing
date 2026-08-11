@@ -1,6 +1,6 @@
 MODEL (
   name gold.sales_enriched,
-  kind FULL,
+  kind VIEW,
   grain order_item_id,
   description 'Enriched order item fact table for dashboarding category and time-based revenue.',
   assertions (
