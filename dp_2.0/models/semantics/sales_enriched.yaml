@@ -22,6 +22,10 @@ dimensions:
   - name: order_item_shipped_date
   - name: order_item_shipped_ts
   - name: order_item_returned_flag
+  - name: order_item_quantity
+  - name: order_item_unit_price
+  - name: order_item_total_amount
+  - name: order_item_margin_amount
 
 measures:
   - name: line_items
