@@ -1,4 +1,4 @@
-name: lenovopostgresdbconnection
+name: lenovopostgresdbconnection2
 version: v2alpha
 type: depot
 tags:
@@ -11,15 +11,15 @@ tags:
   - dataos:resource:depot
   - dataos:tenant:lenovo-sandbox
 description: Lenovo PostgreSQL depot for data storage and querying
-owner: arkadeepsentmdcio
+owner: abhishekbharadwajtmdcio
 tenant: lenovo-sandbox
 spec:
-  name: lenovopostgresdbconnection
+  name: lenovopostgresdbconnection2
   type: postgresql
   owners:
     - abhishekbharadwajtmdcio
   description: PostgreSQL relational database depot for Lenovo synthetic and source data
-  source: lenovopostgresdbconnection
+  source: lenovopostgresdbconnection2
   spec:
     database: demo
     host: tmdc-modern-development-postgresql-server.postgres.database.azure.com
@@ -28,9 +28,9 @@ spec:
     port: 5432
     subprotocol: postgresql
   secrets:
-    - id: lenovo-sandbox:lenovo-postgresdbconnection
+    - id: lenovo-sandbox:lenovo-postgresdbconnection2
       purpose: scan
-    - id: lenovo-sandbox:lenovo-postgresdbconnection
+    - id: lenovo-sandbox:lenovo-postgresdbconnection2
       purpose: query
-    - id: lenovo-sandbox:lenovo-postgresdbconnection
+    - id: lenovo-sandbox:lenovo-postgresdbconnection2
       purpose: rw

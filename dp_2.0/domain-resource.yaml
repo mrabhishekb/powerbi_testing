@@ -5,18 +5,18 @@ tags:
   - sales_analytics
   - postgres
 spec:
-  runAsUser: "abhishekbharadwaj"
-  compute: runnable-default
+  runAsUser: "abhishekbharadwajtmdcio"
+  compute: lenovo-sandbox
   engine: postgres
   repo:
     url: https://github.com/mrabhishekb/powerbi_testing.git
     syncFlags:
       - "--ref=main"
       - "--submodules=off"
-    baseDir: dp_2.0
-    secret: lenovo-sandbox:git-sync
+    baseDir: powerbi_testing/dp_2.0
+    secretId: lenovo-sandbox:git-sync-mrab
   depots:
-    - dataos://lenovopostgresdbconnection?purpose=rw
+    - dataos://lenovopostgresdbconnection2?purpose=rw
   workflow:
     type: schedule
     schedule:

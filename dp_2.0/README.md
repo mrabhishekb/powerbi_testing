@@ -14,7 +14,6 @@ It is also aligned to the `vulcan-deployment` reference layout on your Desktop.
   - `models/gold/sales_enriched.sql`
 - Semantic model
   - `models/semantics/sales_enriched.yaml`
-  - `semantics/sales_enriched.yml` (reference-style semantic file)
 - Metrics
   - `models/metrics/revenue_timeseries.yaml`
   - `models/metrics/line_items_timeseries.yaml`

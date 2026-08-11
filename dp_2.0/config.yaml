@@ -15,7 +15,7 @@ metadata:
     - Minimal migration scaffold for two-chart dashboard use case
 
 users:
-  - username: abhishekbharadwaj
+  - username: abhishekbharadwajtmdcio
     github_username: mrabhishekb
     email: abhishekbharadwaj@tmdc.io
 
@@ -23,7 +23,7 @@ gateways:
   default:
     connection:
       type: depot
-      address: dataos://lenovopostgresdbconnection
+      address: dataos://lenovopostgresdbconnection2
 
 model_defaults:
   dialect: postgres
@@ -40,5 +40,5 @@ deployment:
     url: https://github.com/mrabhishekb/powerbi_testing.git
     baseDir: dp_2.0
   compute: runnable-default
-  runAsUser: "abhishekbharadwaj"
+  runAsUser: "abhishekbharadwajtmdcio"
   engine: postgres
