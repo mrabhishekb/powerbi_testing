@@ -20,15 +20,7 @@ dimensions:
   - name: order_item_fulfillment_status
   - name: order_item_warehouse_region
   - name: order_item_shipped_date
-    granularities:
-      - day
-      - week
-      - month
   - name: order_item_shipped_ts
-    granularities:
-      - day
-      - week
-      - month
   - name: order_item_returned_flag
 
 measures:
