@@ -12,7 +12,7 @@ v1beta:
   data:
     meta:
       title: Demo Sales Product
-      sourceCodeUrl: https://github.com/mrabhishekb/powerbi_testing.git
+      sourceCodeUrl: https://github.com/mrabhishekb/powerbi_testing
 
     collaborators:
       - name: demouser

@@ -1,0 +1,53 @@
+kind: semantic
+name: order_items
+depends_on: order_items
+description: Order line facts including quantity, pricing, fulfillment, and revenue metrics.
+
+joins:
+  - name: products
+    type: many_to_one
+    expression: "{order_items.product_id} = {products.product_id}"
+
+dimensions:
+  - name: order_item_id
+    behavior:
+      type: identifier
+  - name: order_id
+  - name: product_id
+  - name: product_name
+    expression: "{products.product_name}"
+  - name: product_category
+    expression: "{products.product_category}"
+  - name: product_subcategory
+    expression: "{products.product_subcategory}"
+  - name: product_brand
+    expression: "{products.product_brand}"
+  - name: supplier_country
+    expression: "{products.supplier_country}"
+  - name: fulfillment_status
+    expression: "{order_items.order_item_fulfillment_status}"
+  - name: warehouse_region
+    expression: "{order_items.order_item_warehouse_region}"
+  - name: shipped_date
+    expression: "{order_items.order_item_shipped_date}"
+  - name: order_item_shipped_month
+    expression: "DATE_TRUNC('month', {order_items.order_item_shipped_date})"
+  - name: returned_flag
+    expression: "{order_items.order_item_returned_flag}"
+
+measures:
+  - name: line_items
+    type: count
+    expression: "{order_items.order_item_id}"
+  - name: total_quantity
+    type: sum
+    expression: "{order_items.order_item_quantity}"
+  - name: total_revenue
+    type: sum
+    expression: "{order_items.order_item_total_amount}"
+  - name: total_margin
+    type: sum
+    expression: "{order_items.order_item_margin_amount}"
+  - name: avg_unit_price
+    type: avg
+    expression: "{order_items.order_item_unit_price}"

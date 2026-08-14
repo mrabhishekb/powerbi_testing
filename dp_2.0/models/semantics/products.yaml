@@ -1,0 +1,20 @@
+kind: semantic
+name: products
+depends_on: products
+description: Product master attributes used for category and brand slicing.
+
+dimensions:
+  - name: product_id
+    behavior:
+      type: identifier
+  - name: product_name
+  - name: product_category
+  - name: product_subcategory
+  - name: product_brand
+  - name: supplier_country
+    expression: "{products.product_supplier_country}"
+
+measures:
+  - name: total_products
+    type: count_distinct
+    expression: "{products.product_id}"

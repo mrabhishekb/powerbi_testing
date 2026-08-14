@@ -9,23 +9,22 @@ It is also aligned to the `vulcan-deployment` reference layout on your Desktop.
   - `public.order_items`
   - `public.products`
 - Physical models
-  - `models/bronze/order_items.sql`
-  - `models/bronze/products.sql`
-  - `models/gold/sales_enriched.sql`
-- Semantic model
-  - `models/semantics/sales_enriched.yaml`
-- Quality and deployment
-  - `checks/sales_enriched.yml`
+  - `models/sql/order_items.sql`
+  - `models/sql/products.sql`
+- Semantic models
+  - `models/semantics/order_items.yaml`
+  - `models/semantics/products.yaml`
+- Deployment
   - `domain-resource.yaml`
   - `git-sync-secret.yml`
   - `Makefile`
 
 ## Dashboard outcomes supported
 
-1. Revenue by product category (bar chart)
-2. Monthly revenue trend (line chart)
+1. Line items by product category (bar chart)
+2. Monthly line-item trend (line chart)
 
-Use semantic `sales_enriched` directly for these views.
+Use semantics `order_items` and `products` directly for these views.
 
 ## Local Vulcan steps
 
