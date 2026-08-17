@@ -1,12 +1,12 @@
 kind: semantic
 name: order_items
-depends_on: order_items
+depends_on: sales.order_items
 description: Order line facts including quantity, pricing, fulfillment, and revenue metrics.
 
 joins:
   - name: products
     type: many_to_one
-    expression: "{order_items.product_id} = {products.product_id}"
+    on: product_id
 
 dimensions:
   - name: order_item_id

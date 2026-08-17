@@ -1,6 +1,6 @@
 kind: semantic
 name: products
-depends_on: products
+depends_on: sales.products
 description: Product master attributes used for category and brand slicing.
 
 dimensions:

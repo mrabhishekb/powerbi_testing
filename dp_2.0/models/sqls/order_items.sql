@@ -1,5 +1,5 @@
 MODEL (
-  name order_items,
+  name sales.order_items,
   kind VIEW,
   grain order_item_id,
   description 'Order line facts including quantity, pricing, fulfillment, and revenue metrics.'

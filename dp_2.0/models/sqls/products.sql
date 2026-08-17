@@ -1,5 +1,5 @@
 MODEL (
-  name products,
+  name sales.products,
   kind VIEW,
   grain product_id,
   description 'Product master attributes used for category and brand slicing.'
