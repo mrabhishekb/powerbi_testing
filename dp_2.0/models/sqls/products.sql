@@ -23,6 +23,7 @@ SELECT
   product_active_flag,
   product_inventory_on_hand,
   product_supplier_country,
+  product_supplier_country AS supplier_country,
   product_return_rate_pct,
   product_created_at,
   product_updated_at

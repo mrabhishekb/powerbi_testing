@@ -12,7 +12,6 @@ dimensions:
   - name: product_subcategory
   - name: product_brand
   - name: supplier_country
-    expression: "{products.product_supplier_country}"
 
 measures:
   - name: total_products

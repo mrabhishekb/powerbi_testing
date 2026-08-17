@@ -5,22 +5,46 @@
     order_item_id: BIGINT
     order_id: BIGINT
     product_id: BIGINT
+    order_item_line_number: INTEGER
     order_item_quantity: INTEGER
     order_item_unit_price: NUMERIC
+    order_item_unit_cost: NUMERIC
+    order_item_discount_pct: NUMERIC
+    order_item_discount_amount: NUMERIC
+    order_item_subtotal_amount: NUMERIC
+    order_item_tax_amount: NUMERIC
     order_item_total_amount: NUMERIC
     order_item_margin_amount: NUMERIC
     order_item_fulfillment_status: VARCHAR
     order_item_warehouse_region: VARCHAR
     order_item_shipped_date: DATE
     order_item_returned_flag: BOOLEAN
+    order_item_return_date: DATE
+    order_item_return_reason: VARCHAR
+    order_item_created_at: TIMESTAMP
+    order_item_updated_at: TIMESTAMP
 
 - name: public.products
   grain:
     - product_id
   columns:
     product_id: BIGINT
+    product_sku: VARCHAR
     product_name: VARCHAR
     product_category: VARCHAR
     product_subcategory: VARCHAR
     product_brand: VARCHAR
+    product_supplier_name: VARCHAR
+    product_lifecycle_status: VARCHAR
+    product_launch_date: DATE
+    product_unit_cost: NUMERIC
+    product_list_price: NUMERIC
+    product_margin_pct: NUMERIC
+    product_rating: NUMERIC
+    product_review_count: INTEGER
+    product_active_flag: BOOLEAN
+    product_inventory_on_hand: INTEGER
     product_supplier_country: VARCHAR
+    product_return_rate_pct: NUMERIC
+    product_created_at: TIMESTAMP
+    product_updated_at: TIMESTAMP
